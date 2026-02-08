@@ -1,0 +1,51 @@
+/* Ajuste Compacto para a Sidebar */
+.sidebar {
+    width: 220px; /* Reduzi a largura */
+    padding: 15px; /* Menos espaço interno */
+}
+
+.side-nav a {
+    padding: 8px 12px; /* Itens mais próximos */
+    font-size: 0.9rem;
+    margin-bottom: 2px;
+}
+
+/* Estilo das Tabelas */
+.styled-table {
+    width: 100%;
+    border-collapse: collapse;
+    background: #1a1a1a;
+    border-radius: 8px;
+    overflow: hidden;
+    margin-top: 20px;
+}
+
+.styled-table th {
+    background: #252525;
+    color: var(--primary);
+    text-align: left;
+    padding: 12px;
+    font-size: 0.85rem;
+    text-transform: uppercase;
+}
+
+.styled-table td {
+    padding: 12px;
+    border-bottom: 1px solid #333;
+    font-size: 0.9rem;
+}
+
+/* Status e Badges */
+.status.active { color: #2ecc71; font-weight: bold; }
+.status.inactive { color: var(--primary); font-weight: bold; }
+
+.btn-icon {
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 1.1rem;
+    margin-right: 5px;
+    transition: 0.3s;
+}
+
+.btn-icon:hover { transform: scale(1.2); }

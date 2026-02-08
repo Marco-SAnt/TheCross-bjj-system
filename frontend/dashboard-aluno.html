@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Minha Área | Flow BJJ</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="dashboard-page">
+    <div class="sidebar">
+        <div class="logo">FLOW<span>BJJ</span></div>
+        <nav class="side-nav">
+            <a href="#" class="active">Início</a>
+            <a href="#">Minha Frequência</a>
+            <a href="#">Financeiro</a>
+            <a href="index.html" class="logout">Sair</a>
+        </nav>
+    </div>
+
+    <main class="main-content">
+        <header class="dash-header">
+            <h1>Olá, <span id="nomeAluno">Guerreiro</span>! 🥋</h1>
+            <div class="perfil-resumo">
+                <span class="badge-faixa azul">Faixa Azul - 2º Grau</span>
+            </div>
+        </header>
+        
+        <div class="stat-grid">
+            <div class="stat-card checkin-card">
+                <h4>Check-in do Dia</h4>
+                <p>Aula das 19:00 - No-Gi</p>
+                <button class="btn-primary" onclick="confirmarPresenca()">Confirmar Presença</button>
+            </div>
+            <div class="stat-card">
+                <h4>Mensalidade</h4>
+                <p>Vence em: 10/02</p>
+                <span class="status-em-dia">PAGO</span>
+            </div>
+            <div class="stat-card">
+                <h4>Presenças no Mês</h4>
+                <h2>12</h2>
+            </div>
+        </div>
+    </main>
+
+    <script>
+        function confirmarPresenca() {
+            alert("OSS! Sua presença na aula de No-Gi foi confirmada.");
+        }
+    </script>
+</body>
+</html>

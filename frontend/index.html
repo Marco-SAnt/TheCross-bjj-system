@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flow BJJ - Domine a Arte Suave</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <header>
+        <nav class="navbar">
+            <div class="logo">FLOW<span>BJJ</span></div>
+            <ul class="nav-links">
+                <li><a href="#home">Início</a></li>
+                <li><a href="#sobre">Sobre</a></li>
+                <li><a href="#planos">Planos</a></li>
+                <li><a href="#contato">Contato</a></li>
+            </ul>
+            <a href="login.html" class="login-btn">Login</a>
+        </nav>
+    </header>
+
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <h1>DOMINE A <br><span>ARTE SUAVE</span></h1>
+            <p>Treine, evolua e transforme-se. Junte-se à família Flow BJJ.</p>
+            <div class="hero-btns">
+                <a href="#planos" class="btn-primary">Ver Planos</a>
+                <a href="#" class="btn-secondary">Assista ao Vídeo</a>
+            </div>
+        </div>
+    </section>
+
+    <section id="sobre" class="features">
+        <div class="card">
+            <h3>Técnica</h3>
+            <p>Foco nos detalhes que fazem a diferença no tatame.</p>
+        </div>
+        <div class="card">
+            <h3>Disciplina</h3>
+            <p>O jiu-jitsu molda o corpo e fortalece a mente.</p>
+        </div>
+        <div class="card">
+            <h3>Comunidade</h3>
+            <p>Um ambiente unido para todos os níveis e idades.</p>
+        </div>
+    </section>
+
+    <section id="professores" class="team">
+        <h2 class="section-title">Nossos <span>Mestres</span></h2>
+        <div class="team-grid">
+            <div class="member-card">
+                <div class="member-photo" style="background-image: url('https://images.unsplash.com/photo-1599058917232-d750c1859d7c?auto=format&fit=crop&q=80')"></div>
+                <h3>Mestre Hélio</h3>
+                <p>Faixa Preta 4º Grau</p>
+                <span>Especialista em Defesa Pessoal</span>
+            </div>
+            <div class="member-card">
+                <div class="member-photo" style="background-image: url('https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?auto=format&fit=crop&q=80')"></div>
+                <h3>Prof. Beatriz</h3>
+                <p>Faixa Preta</p>
+                <span>Campeã Mundial No-Gi</span>
+            </div>
+        </div>
+    </section>
+
+    <section id="planos" class="pricing">
+        <h2 class="section-title">Escolha seu <span>Plano</span></h2>
+        <div class="pricing-grid">
+            <div class="price-card">
+                <h3>Mensal</h3>
+                <div class="price">R$ 180<span>/mês</span></div>
+                <ul>
+                    <li>Acesso total às aulas</li>
+                    <li>Sem fidelidade</li>
+                    <li>Treinos Gi e No-Gi</li>
+                </ul>
+                <button class="btn-secondary">Assinar Agora</button>
+            </div>
+            <div class="price-card featured">
+                <div class="badge">Mais Popular</div>
+                <h3>Semestral</h3>
+                <div class="price">R$ 150<span>/mês</span></div>
+                <ul>
+                    <li>10% de desconto</li>
+                    <li>Seminários exclusivos</li>
+                    <li>Acompanhamento de peso</li>
+                </ul>
+                <button class="btn-primary">Assinar Agora</button>
+            </div>
+        </div>
+    </section>
+
+    <section id="contato" class="contact">
+        <h2 class="section-title">Fale <span>Conosco</span></h2>
+        
+        <div class="contact-container">
+            <div class="contact-form">
+                <form id="formContato">
+                    <div class="input-group">
+                        <label>Seu Nome</label>
+                        <input type="text" placeholder="Ex: Rickson Gracie" required>
+                    </div>
+                    <div class="input-group">
+                        <label>E-mail</label>
+                        <input type="email" placeholder="seu@email.com" required>
+                    </div>
+                    <div class="input-group">
+                        <label>Mensagem</label>
+                        <textarea rows="5" placeholder="Como podemos te ajudar?"></textarea>
+                    </div>
+                    <button type="submit" class="btn-primary">Enviar Mensagem</button>
+                </form>
+            </div>
+
+            <div class="contact-info">
+                <div class="info-item">
+                    <h4>📍 Localização</h4>
+                    <p>Rua do Tatame, 123 - Rio de Janeiro, RJ</p>
+                </div>
+                <div class="info-item">
+                    <h4>📞 Telefone / WhatsApp</h4>
+                    <p>(21) 98888-7777</p>
+                </div>
+                <div class="info-item">
+                    <h4>⏰ Horários</h4>
+                    <p>Segunda a Sexta: 06h às 22h</p>
+                    <p>Sábado: 09h às 12h</p>
+                </div>
+                
+                <div class="map-placeholder">
+                    <p>Aqui você pode inserir o Iframe do Google Maps</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="footer-content">
+            <div class="logo">FLOW<span>BJJ</span></div>
+            <p>&copy; 2026 Flow BJJ. Todos os direitos reservados. OSS!</p>
+            <div class="social-links">
+                <a href="#">Instagram</a>
+                <a href="#">Facebook</a>
+                <a href="#">YouTube</a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+</html>

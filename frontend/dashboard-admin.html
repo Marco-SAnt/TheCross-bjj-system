@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Painel Admin | Flow BJJ</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="sidebar">
+        <div class="logo">FLOW<span>BJJ</span></div>
+        <nav class="side-nav">
+            <a href="#" class="active">Painel Geral</a>
+            <a href="#">Gerenciar Alunos</a>
+            <a href="#">Mensalidades</a>
+            <a href="#">Configurações</a>
+            <a href="index.html" class="logout">Sair</a>
+        </nav>
+    </div>
+
+    <main class="main-content">
+        <h1>Dashboard Administrativo</h1>
+        
+        <div class="stat-grid">
+            <div class="stat-card">
+                <h4>Total Alunos</h4>
+                <h2>128</h2>
+            </div>
+            <div class="stat-card" style="border-left-color: var(--secondary);">
+                <h4>Check-ins Hoje</h4>
+                <h2>42</h2>
+            </div>
+            <div class="stat-card" style="border-left-color: #ff4444;">
+                <h4>Pendentes</h4>
+                <h2>15</h2>
+            </div>
+        </div>
+
+        <section class="recent-activity">
+            <h3>Últimos Check-ins</h3>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Nome</th>
+                        <th>Faixa</th>
+                        <th>Horário</th>
+                        <th>Status</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Leandro Lo</td>
+                        <td>Preta</td>
+                        <td>19:05</td>
+                        <td><span class="status-em-dia">Confirmado</span></td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+    </main>
+
+    <main class="main-content">
+        <section id="gerenciar-alunos" class="admin-section">
+            <div class="section-header">
+                <h2>Gerenciar <span>Alunos</span></h2>
+                <button class="btn-primary" onclick="abrirModalNovoAluno()">+ Adicionar Aluno</button>
+            </div>
+            
+            <div class="filter-bar">
+                <input type="text" placeholder="Buscar por nome ou faixa...">
+                <select>
+                    <option value="">Todas as Faixas</option>
+                    <option value="branca">Branca</option>
+                    <option value="azul">Azul</option>
+                    <option value="preta">Preta</option>
+                </select>
+            </div>
+
+            <table class="styled-table">
+                <thead>
+                    <tr>
+                        <th>Nome</th>
+                        <th>Graduação</th>
+                        <th>Data de Início</th>
+                        <th>Status</th>
+                        <th>Ações</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Leandro Lo</td>
+                        <td><span class="badge-faixa preta">Preta</span></td>
+                        <td>12/05/2020</td>
+                        <td><span class="status active">Ativo</span></td>
+                        <td>
+                            <button class="btn-icon">✏️</button>
+                            <button class="btn-icon">🗑️</button>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+        <section id="mensalidades" class="admin-section" style="display:none;">
+            <h2>Gestão <span>Financeira</span></h2>
+            <div class="stat-grid">
+                <div class="stat-card">
+                    <h4>Receita Mensal</h4>
+                    <p>R$ 12.450,00</p>
+                </div>
+                <div class="stat-card warning">
+                    <h4>Pendentes</h4>
+                    <p>15 Alunos</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="configuracoes" class="admin-section" style="display:none;">
+            <h2>Configurações do <span>Sistema</span></h2>
+            <div class="config-grid">
+                <div class="config-item">
+                    <label>Nome da Academia</label>
+                    <input type="text" value="Flow BJJ">
+                </div>
+                <div class="config-item">
+                    <label>Notificações de Atraso</label>
+                    <input type="checkbox" checked> Ativar E-mail Automático
+                </div>
+                <button class="btn-primary">Salvar Alterações</button>
+            </div>
+        </section>
+    </main>
+
+    <div id="modalCadastroAluno" class="modal">
+        <div class="modal-content">
+            <span class="close-button" onclick="fecharModalCadastro()">&times;</span>
+            <h2>Cadastrar Novo <span>Aluno</span></h2>
+            
+            <form id="formCadastroAluno">
+                <div class="input-group">
+                    <label for="alunoNome">Nome Completo</label>
+                    <input type="text" id="alunoNome" required>
+                </div>
+                <div class="input-group">
+                    <label for="alunoEmail">E-mail</label>
+                    <input type="email" id="alunoEmail" required>
+                </div>
+                <div class="input-group">
+                    <label for="alunoTelefone">Telefone</label>
+                    <input type="tel" id="alunoTelefone" placeholder="(XX) XXXXX-XXXX">
+                </div>
+                <div class="input-group">
+                    <label for="alunoFaixa">Faixa</label>
+                    <select id="alunoFaixa" required>
+                        <option value="branca">Branca</option>
+                        <option value="azul">Azul</option>
+                        <option value="roxa">Roxa</option>
+                        <option value="marrom">Marrom</option>
+                        <option value="preta">Preta</option>
+                    </select>
+                </div>
+                <div class="input-group">
+                    <label for="alunoDataNascimento">Data de Nascimento</label>
+                    <input type="date" id="alunoDataNascimento">
+                </div>
+                <div class="input-group">
+                    <label for="alunoDataMatricula">Data de Matrícula</label>
+                    <input type="date" id="alunoDataMatricula" value="2026-02-07" required>
+                </div>
+                <div class="input-group">
+                    <label for="alunoMensalidade">Valor Mensalidade (R$)</label>
+                    <input type="number" id="alunoMensalidade" step="0.01" value="180.00" required>
+                </div>
+                <div class="input-group checkbox-group">
+                    <input type="checkbox" id="alunoMensalidadePaga" checked>
+                    <label for="alunoMensalidadePaga">Mensalidade Paga (1º mês)</label>
+                </div>
+                
+                <button type="submit" class="btn-primary">Cadastrar</button>
+            </form>
+        </div>
+    </div>
+
+    <main class="main-content">
+    <section id="aba-painel" class="aba-conteudo">
+        <h1>Painel Geral</h1>
+        </section>
+
+    <section id="aba-alunos" class="aba-conteudo" style="display: none;">
+        <h1>Gerenciar Alunos</h1>
+        <button class="btn-primary" onclick="abrirModalNovoAluno()">+ Adicionar Aluno</button>
+        </section>
+
+    <section id="aba-mensalidades" class="aba-conteudo" style="display: none;">
+        <h1>Mensalidades</h1>
+        </section>
+</main>
+</body>
+</html>
